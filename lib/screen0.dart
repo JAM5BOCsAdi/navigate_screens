@@ -13,6 +13,7 @@ class Screen0 extends StatelessWidget {
         ),
         body: Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               ElevatedButton(
                 style: ButtonStyle(
