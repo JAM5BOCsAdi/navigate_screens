@@ -1,10 +1,30 @@
 import 'package:flutter/material.dart';
 
-class Screen2 extends StatelessWidget {
+class Screen2 extends StatefulWidget {
   const Screen2({Key? key}) : super(key: key);
 
   @override
+  State<Screen2> createState() => _Screen2State();
+}
+
+class _Screen2State extends State<Screen2> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    print("initState Called");
+  }
+
+  @override
+  void deactivate() {
+    // TODO: implement deactivate
+    super.deactivate();
+    print("Deactivated Called");
+  }
+
+  @override
   Widget build(BuildContext context) {
+    print("Build Called");
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
@@ -18,8 +38,7 @@ class Screen2 extends StatelessWidget {
             ),
             child: const Text('Go Back To Screen 1'),
             onPressed: () {
-              Navigator.pop(
-                  context); // This context is = above context => Widget build(Build context)
+              Navigator.pop(context); // This context is = above context => Widget build(Build context)
             },
           ),
         ),
